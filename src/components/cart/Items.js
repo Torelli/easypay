@@ -25,7 +25,7 @@ export default function Items(items) {
                   <p class="text-gray-500 flex justify-around items-center gap-2"><button class="drop-shadow rounded-full hover:bg-gray-200"><i class="px-2 py-2 border border-gray-500 rounded-full fa-solid fa-plus"></i></button><input class="bg-white border border-gray-500 text-center h-10 w-10 px-2 pr-2 rounded-full text-sm focus:outline-none" type="number" value="1" disabled><button class="drop-shadow rounded-full hover:bg-gray-200"><i class="px-2 py-2 border border-gray-500 rounded-full fa-solid fa-minus"></i></button></p>
 
                   <div class="flex">
-                    <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500 cursor-not-allowed">Remove</button>
+                    <button type="button" class="font-medium text-sky-600 hover:text-sky-500 cursor-not-allowed">Remove</button>
                   </div>
                 </div>
               </div>

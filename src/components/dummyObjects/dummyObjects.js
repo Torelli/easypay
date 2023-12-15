@@ -7,7 +7,7 @@ const cartItems = [
     price: 90.00,
   },
   {
-    id: 3,
+    id: 2,
     name: "Medium Stuff Satchel",
     picture:
       "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",

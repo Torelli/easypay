@@ -9,10 +9,10 @@ export default function SelectField(id, label, options, size = 1) {
   const select = document.createElement("select");
   select.setAttribute(
     "class",
-    "bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded focus-visible:outline-0 focus-visible:border-sky-500 block w-full p-1"
+    "form-field bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded focus-visible:outline-0 focus-visible:border-sky-500 block w-full p-1"
   );
   select.required = true;
-  select.innerHTML = `<option selected>${label}</option>`;
+  select.innerHTML = `<option value="" selected>${label}</option>`;
 
   for (let option of options) {
     select.innerHTML += `

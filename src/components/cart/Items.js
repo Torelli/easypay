@@ -12,14 +12,14 @@ export default function Items(items) {
             <ul role="list" class="-my-6 divide-y divide-gray-200">
                 <li class="flex py-6">
                 <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-400">
-                    <img src="${item.picture}" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center">
+                    <img src="${item.picture}" class="h-full w-full object-cover object-center">
                 </div>
 
                 <div class="ml-4 flex flex-1 flex-col">
                     <div>
                     <div class="flex justify-between text-base font-medium text-gray-900">
                         <h3>
-                        <a href="#">${item.name}</a>
+                        <a id="item-name-${item.id}" data-id="${item.id}" class="item-name" href="#">${item.name}</a>
                         </h3>
                         <p id="item-price-${item.id}" data-price-quantity="${item.price}" data-price="${item.price}" class="prices ml-4">${formatPrice(item.price)}</p>
                     </div>

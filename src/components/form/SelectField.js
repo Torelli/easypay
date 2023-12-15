@@ -11,6 +11,7 @@ export default function SelectField(id, label, options, size = 1) {
     "class",
     "form-field bg-gray-50 border border-gray-500 text-gray-900 text-sm rounded focus-visible:outline-0 focus-visible:border-sky-500 block w-full p-1"
   );
+  select.setAttribute("id", id);
   select.required = true;
   select.innerHTML = `<option value="" selected>${label}</option>`;
 

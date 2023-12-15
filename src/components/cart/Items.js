@@ -1,3 +1,5 @@
+import formatPrice from "../../util/formatPrice";
+
 export default function Items(items) {
     const container = document.createElement("div");
     let domItems = '';
@@ -18,7 +20,7 @@ export default function Items(items) {
                         <h3>
                         <a href="#">${item.name}</a>
                         </h3>
-                        <p class="ml-4">${item.price}</p>
+                        <p id="itemPrice${item.id}" data-price="${item.price}" class="ml-4">${formatPrice(item.price)}</p>
                     </div>
                     </div>
                     <div class="flex flex-1 items-end justify-between text-sm">

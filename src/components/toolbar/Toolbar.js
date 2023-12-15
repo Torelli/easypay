@@ -1,6 +1,6 @@
 export default function Toolbar() {
   const container = document.createElement("div");
-  container.setAttribute("class", "fixed top-0 left-0 right-0 w-full bg-sky-500 flex justify-between items-center drop-shadow-lg")
+  container.setAttribute("class", "fixed z-50 top-0 left-0 right-0 w-full bg-sky-500 flex justify-between items-center drop-shadow-lg")
   container.innerHTML = `
         <h1 class="font-serif font-black text-3xl text-white py-4 px-6 cursor-pointer bg-amber-400 rounded-e-full hover:bg-amber-500 hover:text-slate-100 transition-all"><i class="fa-solid fa-shop"></i>easyPay</h1>
         <div class="relative text-gray-600">

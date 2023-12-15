@@ -2,9 +2,21 @@ const cartItems = [
   {
     name: "Throwback Hip Bag",
     picture:
-      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
-    price: "U$100.00",
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    price: "U$90.00",
   },
+  {
+    name: "Medium Stuff Satchel",
+    picture:
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
+    price: "U$32.00",
+  },
+  {
+    name: "Zip Tote Basket",
+    picture:
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-03.jpg",
+    price: "U$100.00",
+  }
 ];
 
 const phoneOptions = [

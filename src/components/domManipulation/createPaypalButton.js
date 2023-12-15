@@ -2,6 +2,7 @@ import { loadScript } from "@paypal/paypal-js";
 import checkFormInputs from "./checkFormInputs";
 import getCartData from "./getCartData";
 import getPayerData from "./getPayerData";
+import displayResultMessage from "./displayResultMessage";
 
 export default function createPaypalButton() {
   let cart = {};
@@ -29,7 +30,7 @@ export default function createPaypalButton() {
           },
           onClick: function () {
             if (!checkFormInputs()) {
-              resultMessage("You have to fill all the form fields!");
+              displayResultMessage("You have to fill all the form fields!");
             } else {
             }
           },
@@ -60,7 +61,7 @@ export default function createPaypalButton() {
               }
             } catch (error) {
               console.error(error);
-              resultMessage(
+              displayResultMessage(
                 `Could not initiate PayPal Checkout...<br><br>${error}`
               );
             }
@@ -93,7 +94,7 @@ export default function createPaypalButton() {
                 const transaction =
                   orderData?.purchase_units?.[0]?.payments?.captures?.[0] ||
                   orderData?.purchase_units?.[0]?.payments?.authorizations?.[0];
-                resultMessage(
+                displayResultMessage(
                   `Thank you for buying with us! Your checkout id is ${transaction.id}`,
                   false
                 );
@@ -105,7 +106,7 @@ export default function createPaypalButton() {
               }
             } catch (error) {
               console.error(error);
-              resultMessage(
+              displayResultMessage(
                 `Sorry, your transaction could not be processed...<br><br>${error}`
               );
             }
@@ -119,22 +120,4 @@ export default function createPaypalButton() {
     .catch((error) => {
       console.error("failed to load the PayPal JS SDK script", error);
     });
-
-  function resultMessage(message, isError = true) {
-    const resultContainer = document.querySelector("#result-message-container");
-    const resultMessage = document.querySelector("#result-message");
-
-    if (!isError) {
-      resultContainer.classList.replace("bg-red-100", "bg-green-100");
-      resultContainer.classList.replace("border-red-400", "border-green-400");
-      resultContainer.classList.replace("text-red-700", "text-green-700");
-    } else {
-      resultContainer.classList.replace("bg-green-100", "bg-red-100");
-      resultContainer.classList.replace("border-green-400", "border-red-400");
-      resultContainer.classList.replace("text-green-700", "text-red-700");
-    }
-
-    resultContainer.classList.remove("hidden");
-    resultMessage.innerText = message;
-  }
 }

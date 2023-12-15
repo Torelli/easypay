@@ -1,7 +1,7 @@
 export default function Toolbar() {
   const container = document.createElement("div");
+  container.setAttribute("class", "fixed top-0 left-0 right-0 w-full bg-sky-500 flex justify-between items-center drop-shadow-lg")
   container.innerHTML = `
-    <div class="w-full bg-sky-500 flex justify-between items-center drop-shadow-lg">
         <h1 class="font-serif font-black text-3xl text-white py-4 px-6 cursor-pointer bg-amber-400 rounded-e-full hover:bg-amber-500 hover:text-slate-100 transition-all"><i class="fa-solid fa-shop"></i>easyPay</h1>
         <div class="relative text-gray-600">
             <input type="search" name="search" placeholder="Search" class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none">
@@ -12,7 +12,6 @@ export default function Toolbar() {
             </button>
         </div>
         <button type="button" class="bg-amber-400 py-4 px-6 rounded-s-full hover:bg-amber-500 hover:text-slate-100 transition-all"><i class="fa-solid fa-cart-shopping text-white"></i></button>
-    </div>
     `;
 
   return container;
